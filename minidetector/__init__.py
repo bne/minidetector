@@ -23,6 +23,7 @@ class Middleware(object):
             if 'application/vnd.wap.xhtml+xml' in s:
                 # Then it's a wap browser
                 
+                request.is_wap = True
                 request.is_simple_device = True
                 
                 return None
